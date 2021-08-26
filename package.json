@@ -13,9 +13,11 @@
     "format:all": "prettier --write \"src/**/*.{js,jsx,json,ts,tsx}\""
   },
   "dependencies": {
+    "babel-plugin-styled-components": "^1.13.2",
     "next": "11.1.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "styled-components": "^5.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
@@ -25,6 +27,7 @@
     "@storybook/react": "^6.3.7",
     "@svgr/webpack": "^5.5.0",
     "@types/react": "17.0.19",
+    "@types/styled-components": "^5.1.13",
     "@typescript-eslint/eslint-plugin": "^4.29.3",
     "@typescript-eslint/parser": "^4.29.3",
     "babel-loader": "^8.2.2",
