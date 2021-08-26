@@ -1,5 +1,5 @@
 This is a just playground project.
-I create the project through below command line
+I had made this project through below command line
 ```bash
 yarn create next-app --typescript
 ```
