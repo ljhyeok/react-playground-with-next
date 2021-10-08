@@ -7,8 +7,11 @@ const BlurAnimation = () => {
       root: null,
       threshold: 0.1,
     };
-    const callback = (entries, observer) => {
-      entries.forEach((entry) => {
+    const callback = (
+      entries: IntersectionObserverEntry[],
+      _: IntersectionObserver
+    ) => {
+      entries.forEach((entry: IntersectionObserverEntry) => {
         // viewport 가시 영역
         if (entry?.isIntersecting) {
           // FIXME: test code
@@ -16,15 +19,15 @@ const BlurAnimation = () => {
           entry?.target.classList.add('blur');
         }
         // viewport 비가시 영역
-        else {
-        }
       });
     };
     const observer = new IntersectionObserver(callback, options);
     Array(30)
       .fill(0)
       .map((_, index) => {
-        const target = document.querySelector(`#test_${index}`);
+        const target: Element = document.querySelector(
+          `#test_${index}`
+        ) as Element;
         observer.observe(target);
       });
   }, []);
